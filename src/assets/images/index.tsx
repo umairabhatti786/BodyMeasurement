@@ -8,6 +8,7 @@ export const images = {
     body: require("../images/body.png"),
     connect: require("../images/connect.png"),
     wallpaper: require("../images/wallpaper.png"),
+    user_placeholder: require("../images/user_placeholder.jpg"),
 
 
 

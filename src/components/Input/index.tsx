@@ -58,9 +58,9 @@ const CustomInput = ({
           <CustomText
             text={label}
             fontWeight="600"
-            size={21}
-            color={theme.colors.secondry}
-            fontFam={fonts.InterTight_Medium}
+            size={22}
+            color={theme.colors.textblack}
+            fontFam={fonts.Lato_Bold}
           />
         </View>
       )}
@@ -68,24 +68,17 @@ const CustomInput = ({
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
-          paddingHorizontal: sizeHelper.calWp(35),
-          height: sizeHelper.calHp(height || 75),
+          paddingLeft: sizeHelper.calWp(30),
+          height: sizeHelper.calHp(height || 80),
           alignItems: "center",
-          borderRadius: borderRadius || 999,
-          backgroundColor: backgroundColor || theme.colors.white,
+          borderRadius: borderRadius || sizeHelper.calWp(25),
+          backgroundColor: backgroundColor || theme.colors.grey,
+        
+          borderWidth:1,
+          borderColor:theme.colors.greydot
         }}
       >
-        {leftSource && (
-          <Image
-            source={leftSource}
-            style={{
-              width: sizeHelper.calWp(30),
-              height: sizeHelper.calWp(30),
-              tintColor: theme.colors.secondry,
-            }}
-            resizeMode={"contain"}
-          />
-        )}
+        
 
         <TextInput
           value={value}
@@ -94,7 +87,7 @@ const CustomInput = ({
           allowFontScaling={false} // Disable font scaling
           style={{
             fontSize: sizeHelper.calHp(fontSize || 22),
-            width: rightSource ? "85%" : "98%",
+            width: rightSource ? "89%" : "98%",
             alignItems: "center",
             height: "100%",
             justifyContent: "center",
@@ -102,14 +95,15 @@ const CustomInput = ({
             textAlignVertical: textAlignVertical,
             paddingTop: paddingTop || 0,
             paddingVertical: 0, // Adjust as needed for centering
-            fontFamily: fontFamily || fonts.InterTight_Regular,
-            fontWeight: fontWeight || "400",
+            fontFamily: fontFamily || fonts.Lato_Regular,
+            fontWeight: fontWeight || "500",
             color: color || theme.colors.black,
-            paddingRight: sizeHelper.calWp(rightSource ? 10 : 0),
+            fontStyle:"italic",
+            // paddingRight: sizeHelper.calWp(rightSource ? 10 : 0),
           }}
           placeholder={placeholder}
           multiline={multiline}
-          placeholderTextColor={placeholderTextColor || theme.colors.black+"50"}
+          placeholderTextColor={placeholderTextColor || theme.colors.greytext}
           keyboardType={keyboard}
           maxLength={maxLength}
           secureTextEntry={secureTextEntry || false}
@@ -124,17 +118,17 @@ const CustomInput = ({
             activeOpacity={0.3}
             style={{
               justifyContent: "center",
-              alignItems: "flex-start",
+              alignItems:"flex-end",
               height: "100%",
-              width: sizeHelper.calWp(50),
+              paddingRight:sizeHelper.calWp(30)
             }}
           >
             <Image
               source={rightSource}
               style={{
-                width: sizeHelper.calWp(rightSourceSize || 43),
-                height: sizeHelper.calWp(rightSourceSize || 43),
-                tintColor: '#010101',
+                width: sizeHelper.calWp(rightSourceSize || 35),
+                height: sizeHelper.calWp(rightSourceSize || 35),
+                tintColor: theme.colors.greytext,
               }}
               resizeMode={"contain"}
             />

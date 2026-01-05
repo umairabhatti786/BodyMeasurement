@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.colors.white,
     gap: sizeHelper.calHp(30),
-    paddingHorizontal: sizeHelper.calWp(30),
+    paddingHorizontal: sizeHelper.calWp(35),
 
   },
 });

@@ -5,5 +5,12 @@ export const icons = {
     eye_off:require("../icons/eye_off.png"),
     eye:require("../icons/eye.png"),
 
+        camera:require("../icons/camera.png"),
+    plus:require("../icons/plus.png"),
+    search:require("../icons/search.png"),
+    scan:require("../icons/scan.png"),
+    edit:require("../icons/edit.png"),
+
+
 
 }
