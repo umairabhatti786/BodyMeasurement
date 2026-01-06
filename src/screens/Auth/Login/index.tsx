@@ -72,7 +72,9 @@ const LoginScreen = ({ navigation }: any) => {
           />
         </TouchableOpacity>
       </View>
-      <CustomButtom text="Conectar" />
+      <CustomButtom
+      onPress={()=>navigation.navigate("HomeScreen")}
+       text="Conectar" />
       <TouchableOpacity style={{ alignSelf: 'center' }}>
         <CustomText
           text={'Esqueceu-se da sua senha?'}

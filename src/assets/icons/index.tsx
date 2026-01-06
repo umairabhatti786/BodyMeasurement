@@ -11,6 +11,7 @@ export const icons = {
     scan:require("../icons/scan.png"),
     edit:require("../icons/edit.png"),
 
+    setting:require("../icons/setting.png"),
 
 
 }

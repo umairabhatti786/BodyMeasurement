@@ -9,12 +9,13 @@ import GDPR from "../../screens/Auth/GDPR";
 import OnbordingScreen from "../../screens/Auth/Onboarding";
 import LoginScreen from "../../screens/Auth/Login";
 import SignupScreen from "../../screens/Auth/Signup";
+import HomeScreen from "../../screens/Main/Home";
 
 const Stack = createNativeStackNavigator<any>();
 const AppStack = () => {
   return (
     <>
-      <StatusBar translucent backgroundColor="#F1F0F2" barStyle="dark-content" />
+      {/* <StatusBar translucent backgroundColor="#F1F0F2" barStyle="dark-content" /> */}
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Purpose" component={Purpose} />
@@ -23,6 +24,7 @@ const AppStack = () => {
         <Stack.Screen name="OnbordingScreen" component={OnbordingScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={SignupScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
 
       </Stack.Navigator>
     </>

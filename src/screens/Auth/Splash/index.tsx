@@ -38,6 +38,7 @@ const SplashScreen = ({ navigation }: any) => {
           fontFam={fonts.Lato_Medium}
           />
           <CustomButton
+          width={"100%"}
           text="Começar"
           onPress={() => navigation.navigate("Purpose")}
           />

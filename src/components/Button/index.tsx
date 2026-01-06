@@ -26,7 +26,7 @@ const CustomButton = ({
 }: ButtonProps) => {
   const memoizedStyle = useMemo(() => {
     const baseStyle: ViewStyle = {
-      width: width || "100%",
+      width: width ,
       height: sizeHelper.calHp(height || 80),
       backgroundColor: bgColor || theme.colors.primary,
       justifyContent: 'center',
@@ -34,7 +34,7 @@ const CustomButton = ({
       borderRadius: sizeHelper.calHp(borderRadius || 20),
       borderWidth: borderWidth || 0,
       borderColor: borderColor,
-      paddingHorizontal: paddingHorizontal,
+      paddingHorizontal: sizeHelper.calWp(paddingHorizontal),
       flexDirection: 'row',
       gap: sizeHelper.calWp(15),
     };
@@ -59,13 +59,19 @@ const CustomButton = ({
       style={memoizedStyle}
     >
          {children}
-      <CustomText
+         {
+          text&&(
+               <CustomText
         text={text}
         color={textColor || theme.colors.white}
         size={size || 26}
         fontWeight={"600"}
         fontFam={fontFam || fonts.Lato_SemiBold}
       />
+
+          )
+         }
+   
    
     </TouchableOpacity>
   );
