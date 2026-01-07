@@ -46,5 +46,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: sizeHelper.calHp(100),
     marginTop: sizeHelper.calHp(20),
+    paddingHorizontal: sizeHelper.calWp(35),
+
   },
 });

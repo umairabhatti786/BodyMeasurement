@@ -15,8 +15,9 @@ const GDPR = ({ navigation }: any) => {
     return (
         <>
             <ScreenLayout>
+                
                 <View
-                    style={styles.centeredView}
+                style={{alignItems:'center'}}
                 >
                     <Image
                         source={images.logo}
@@ -26,6 +27,11 @@ const GDPR = ({ navigation }: any) => {
                         }}
                     />
                 </View>
+                    <ScrollView
+                        overScrollMode="always"
+                        style={styles.centeredView}
+                        showsVerticalScrollIndicator={false}
+                    >
                 <View
                 >
                     <CustomText
@@ -63,11 +69,6 @@ const GDPR = ({ navigation }: any) => {
                             marginTop: sizeHelper.calWp(50)
                         }}
                     />
-                    <ScrollView
-                        showsVerticalScrollIndicator={false}
-                        overScrollMode="always"
-                        style={styles.scrollstyle}
-                    >
                         <CustomText
                             text={"A. Informações pessoais"}
                             size={22}
@@ -169,9 +170,9 @@ const GDPR = ({ navigation }: any) => {
                             fontFam={fonts.Lato_Medium}
                             color={theme.colors.greytext}
                         />
+                </View>
                     </ScrollView>
 
-                </View>
             </ScreenLayout>
             <View
                 style={styles.bottomView}
@@ -209,12 +210,7 @@ const styles = StyleSheet.create({
         lineHeight: sizeHelper.calWp(34),
     },
     centeredView: {
-        alignItems: 'center',
-        marginTop: sizeHelper.calHp(50)
-    },
-    scrollstyle: {
-        height: sizeHelper.calHp(400),
-        width: sizeHelper.calWp(600)
+        marginTop: sizeHelper.calHp(10)
     },
     bottomView: {
         backgroundColor: theme.colors.white,

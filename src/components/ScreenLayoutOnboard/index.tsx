@@ -22,7 +22,7 @@ interface ScreenLayoutProps {
   paddingTop?:any
 }
 
-const ScreenLayout: React.FC<ScreenLayoutProps> = ({
+const ScreenLayoutOnboard: React.FC<ScreenLayoutProps> = ({
   children,
   style,
   backgroundColor = theme.colors.white,
@@ -59,9 +59,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: theme.colors.white,
     gap: sizeHelper.calHp(30),
-    paddingHorizontal: sizeHelper.calWp(35) ,
 
   },
 });
 
-export default ScreenLayout;
+export default ScreenLayoutOnboard;

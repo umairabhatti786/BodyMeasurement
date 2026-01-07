@@ -9,6 +9,7 @@ import ScreenLayout from '../../../components/ScreenLayout';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import CustomText from '../../../components/Text';
 import CustomHeader from '../../../components/CustomHeader';
+import ScreenLayoutOnboard from '../../../components/ScreenLayoutOnboard';
 
 const Slides = [
   {
@@ -41,9 +42,13 @@ const OnbordingScreen = ({ navigation }: any) => {
 
   const renderItem = ({ item }: any) => {
     return (
-      <View>
-        <CustomHeader />
-        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+      <View
+      style={{
+            paddingHorizontal: sizeHelper.calWp(35),
+
+      }}
+      >
+        <View style={{ alignItems: 'center', justifyContent: 'center',  }}>
           <StatusBar hidden={true} />
           {item?.image}
           <Image
@@ -79,74 +84,81 @@ const OnbordingScreen = ({ navigation }: any) => {
     );
   };
   return (
-    <ScreenLayout>
-      <View style={{ flex: 1, marginTop: sizeHelper.calHp(-40) }}>
-        <AppIntroSlider
-          renderItem={renderItem}
-          data={Slides}
-          //   onDone={onDone}
-          ref={flatListRef}
-          onSlideChange={onSlideChange}
-          showNextButton={false}
-          showDoneButton={false}
-          renderPagination={() => null} // Disable dots
-        />
+      <ScreenLayoutOnboard>
 
-        <View>
-          <CustomButtom
-            textColor={theme.colors.white}
-            text={'Confirmar'}
-            width={'100%'}
-            onPress={() => {
-              if (currentIndex < Slides.length - 1) {
-                flatListRef.current?.goToSlide(currentIndex + 1, true);
-              } else {
-                navigation.navigate('LoginScreen');
-              }
-            }}
+        <View style={{ flex: 1, marginTop: sizeHelper.calHp(-40) }}>
+
+          <CustomHeader />
+          <AppIntroSlider
+            renderItem={renderItem}
+            data={Slides}
+            //   onDone={onDone}
+            ref={flatListRef}
+            onSlideChange={onSlideChange}
+            showNextButton={false}
+            showDoneButton={false}
+            renderPagination={() => null} 
           />
-        </View>
-
-        <View
+          <View
           style={{
-            ...styles.dotsContainer,
-            marginBottom: sizeHelper.calHp(Platform.OS == 'ios' ? 30 : 100),
-          }}
-        >
-          {Slides.map((it, ind) => {
-            return (
-              <View
-                key={ind.toString()}
-                // Adjust colors to your needs
-                style={{
-                  width:
-                    currentIndex == ind
-                      ? sizeHelper.calWp(16)
-                      : sizeHelper.calWp(16),
-                  height:
-                    currentIndex == ind
-                      ? sizeHelper.calWp(16)
-                      : sizeHelper.calWp(16),
-                  borderRadius:
-                    currentIndex == ind
-                      ? sizeHelper.calWp(20)
-                      : sizeHelper.calWp(16),
+                paddingHorizontal: sizeHelper.calWp(35),
 
-                  backgroundColor:
-                    currentIndex == ind
-                      ? theme.colors.green
-                      : theme.colors.greydot,
-                  borderWidth: currentIndex == ind ? 1 : 0,
-                  borderColor:
-                    currentIndex == ind ? theme.colors.primary : 'transperant',
-                  marginTop: sizeHelper.calHp(23),
-                }}
-              />
-            );
-          })}
+          }}
+          >
+            <CustomButtom
+              textColor={theme.colors.white}
+              text={'Confirmar'}
+              width={'100%'}
+              onPress={() => {
+                if (currentIndex < Slides.length - 1) {
+                  flatListRef.current?.goToSlide(currentIndex + 1, true);
+                } else {
+                  navigation.navigate('LoginScreen');
+                }
+              }}
+            />
+          </View>
+
+          <View
+            style={{
+              ...styles.dotsContainer,
+              marginBottom: sizeHelper.calHp(Platform.OS == 'ios' ? 30 : 100),
+            }}
+          >
+            {Slides.map((it, ind) => {
+              return (
+                <View
+                  key={ind.toString()}
+                  // Adjust colors to your needs
+                  style={{
+                    width:
+                      currentIndex == ind
+                        ? sizeHelper.calWp(16)
+                        : sizeHelper.calWp(16),
+                    height:
+                      currentIndex == ind
+                        ? sizeHelper.calWp(16)
+                        : sizeHelper.calWp(16),
+                    borderRadius:
+                      currentIndex == ind
+                        ? sizeHelper.calWp(20)
+                        : sizeHelper.calWp(16),
+
+                    backgroundColor:
+                      currentIndex == ind
+                        ? theme.colors.green
+                        : theme.colors.greydot,
+                    borderWidth: currentIndex == ind ? 1 : 0,
+                    borderColor:
+                      currentIndex == ind ? theme.colors.primary : 'transperant',
+                    marginTop: sizeHelper.calHp(23),
+                  }}
+                />
+              );
+            })}
+          </View>
         </View>
-      </View>
-    </ScreenLayout>
+      </ScreenLayoutOnboard>
   );
 };
 
