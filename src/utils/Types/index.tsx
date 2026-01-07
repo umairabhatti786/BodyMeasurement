@@ -39,6 +39,7 @@ export type ButtonProps = {
   fontWeight?: string;
   colors?: any;
   children?: any;
+  textStyle?:StyleProp<TextStyle>;
 };
 //  Custom input props
 

@@ -97,12 +97,14 @@ const SignupScreen = ({ navigation }: any) => {
             rightSource={isShowConfirmPassword ? icons.eye : icons.eye_off}
           />
         </View>
-        <CustomButtom text="Criar uma conta" />
+        <CustomButtom
+        onPress={()=>navigation.navigate("LoginScreen")}
+         text="Criar uma conta" />
         <TouchableOpacity style={{ alignSelf: 'center' ,paddingVertical:sizeHelper.calHp(20)}}>
           <CustomText
             text={'Voltar ao login'}
             size={25}
-            color={theme.colors.textblack}
+            color={theme.colors.primary}
             fontWeight="600"
             fontFam={fonts.Lato_SemiBold}
           />

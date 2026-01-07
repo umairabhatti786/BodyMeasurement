@@ -8,6 +8,7 @@ export const theme = {
    grey:'#F4F4F5',
    greydot:'#DDDDDD',
    greyborder:'#B0B0B0',
-   green:"#92D400"
+   green:"#92D400",
+   red:"#D42E00"
   },
 };

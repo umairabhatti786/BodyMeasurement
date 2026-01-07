@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, StyleSheet, Image, StatusBar } from 'react-native';
+import { View, StyleSheet, Image, StatusBar, Platform } from 'react-native';
 import sizeHelper from '../../../utils/Helpers';
 import { images } from '../../../assets/images';
 import { CommonActions } from '@react-navigation/native';
@@ -66,8 +66,9 @@ const styles = StyleSheet.create({
     elevation: sizeHelper.calWp(10),
     backgroundColor: theme.colors.black,
     padding: sizeHelper.calWp(36),
-    height: sizeHelper.calHp(420),
-    marginBottom: sizeHelper.calHp(50),
+    // height: sizeHelper.calHp(420),
+       marginBottom: sizeHelper.calHp(70),
+
     alignContent: 'center',
     gap: sizeHelper.calWp(50),
   },

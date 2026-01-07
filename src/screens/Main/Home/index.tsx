@@ -27,6 +27,7 @@ const HomeScreen = ({ navigation }: any) => {
           style={{
             width: sizeHelper.calWp(180),
             height: sizeHelper.calWp(100),
+            resizeMode:"contain"
           }}
         />
         <View style={{ ...appStyles.row, gap: sizeHelper.calWp(20) }}>
@@ -228,6 +229,7 @@ const HomeScreen = ({ navigation }: any) => {
             borderWidth={1}
             borderRadius={14}
             size={21}
+            onPress={()=>navigation.navigate("CreateUserScreen")}
             height={72}
             textColor={theme.colors.primary}
             borderColor={theme.colors.greydot}

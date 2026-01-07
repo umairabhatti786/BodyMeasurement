@@ -78,8 +78,8 @@ const LoginScreen = ({ navigation }: any) => {
       <TouchableOpacity style={{ alignSelf: 'center' }}>
         <CustomText
           text={'Esqueceu-se da sua senha?'}
-          size={25}
-          color={theme.colors.textblack}
+          size={23}
+          color={theme.colors.primary}
           fontWeight="600"
           fontFam={fonts.Lato_SemiBold}
         />

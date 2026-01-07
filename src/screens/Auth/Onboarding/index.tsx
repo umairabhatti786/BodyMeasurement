@@ -10,6 +10,7 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 import CustomText from '../../../components/Text';
 import CustomHeader from '../../../components/CustomHeader';
 import ScreenLayoutOnboard from '../../../components/ScreenLayoutOnboard';
+import { useFocusEffect } from '@react-navigation/native';
 
 const Slides = [
   {
@@ -36,6 +37,16 @@ const OnbordingScreen = ({ navigation }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatListRef = useRef<AppIntroSlider>(null);
 
+  //   useFocusEffect(
+  //   React.useCallback(() => {
+  //     StatusBar.setHidden(true, 'fade');
+
+  //     return () => {
+  //       StatusBar.setHidden(false, 'fade');
+  //     };
+  //   }, [])
+  // );
+
   const onSlideChange = (index: any) => {
     setCurrentIndex(index);
   };
@@ -44,16 +55,16 @@ const OnbordingScreen = ({ navigation }: any) => {
     return (
       <View
       style={{
-            paddingHorizontal: sizeHelper.calWp(35),
+            paddingHorizontal: sizeHelper.calWp(30),
+            flex:1
 
       }}
       >
         <View style={{ alignItems: 'center', justifyContent: 'center',  }}>
-          <StatusBar hidden={true} />
-          {item?.image}
+        
           <Image
-            source={item.image}
-            style={{ width: '95%', marginTop: sizeHelper.calHp(100) }}
+            source={item?.image}
+            style={{ width: '95%', marginTop: sizeHelper.calHp(100),resizeMode:"contain" }}
             resizeMode="contain"
           />
           <View
@@ -75,7 +86,7 @@ const OnbordingScreen = ({ navigation }: any) => {
             <CustomText
               text={item?.des}
               style={{ textAlign: 'center' }}
-              size={18}
+              // size={18}
               color={theme.colors.greytext}
             />
           </View>
@@ -84,7 +95,9 @@ const OnbordingScreen = ({ navigation }: any) => {
     );
   };
   return (
-      <ScreenLayoutOnboard>
+      <ScreenLayout
+      style={{paddingHorizontal:sizeHelper.calWp(1)}}
+      >
 
         <View style={{ flex: 1, marginTop: sizeHelper.calHp(-40) }}>
 
@@ -101,7 +114,7 @@ const OnbordingScreen = ({ navigation }: any) => {
           />
           <View
           style={{
-                paddingHorizontal: sizeHelper.calWp(35),
+                paddingHorizontal: sizeHelper.calWp(30),
 
           }}
           >
@@ -158,7 +171,7 @@ const OnbordingScreen = ({ navigation }: any) => {
             })}
           </View>
         </View>
-      </ScreenLayoutOnboard>
+      </ScreenLayout>
   );
 };
 

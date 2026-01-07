@@ -23,6 +23,7 @@ const CustomButton = ({
   paddingHorizontal,
   fontWeight,
   children,
+  textStyle
 }: ButtonProps) => {
   const memoizedStyle = useMemo(() => {
     const baseStyle: ViewStyle = {
@@ -31,7 +32,7 @@ const CustomButton = ({
       backgroundColor: bgColor || theme.colors.primary,
       justifyContent: 'center',
       alignItems: 'center',
-      borderRadius: sizeHelper.calHp(borderRadius || 20),
+      borderRadius: sizeHelper.calHp(borderRadius || 22),
       borderWidth: borderWidth || 0,
       borderColor: borderColor,
       paddingHorizontal: sizeHelper.calWp(paddingHorizontal),
@@ -63,6 +64,7 @@ const CustomButton = ({
           text&&(
                <CustomText
         text={text}
+        style={textStyle}
         color={textColor || theme.colors.white}
         size={size || 26}
         fontWeight={"600"}

@@ -21,6 +21,7 @@ const CustomHeader = ({ navigation }: any) => {
           style={{
             width: sizeHelper.calWp(140),
             height: sizeHelper.calWp(100),
+            resizeMode:"contain"
           }}
         />
         <View style={{ width: '60%' }} />

@@ -37,6 +37,7 @@ const AuthHeader = ({  }: any) => {
           style={{
             width: sizeHelper.calWp(180),
             height: sizeHelper.calWp(100),
+            resizeMode:"contain"
           }}
         />
         <View style={{ width:40 }} />

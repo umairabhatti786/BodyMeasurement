@@ -34,15 +34,16 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>PlayfairDisplay-Bold.ttf</string>
-		<string>PlayfairDisplay-Medium.ttf</string>
-		<string>PlayfairDisplay-Regular.ttf</string>
-		<string>PlayfairDisplay-SemiBold.ttf</string>
+		<string>Lato-Bold.ttf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-SemiBold.ttf</string>
+		<string>Lato-Medium.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

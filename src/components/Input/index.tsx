@@ -71,7 +71,7 @@ const CustomInput = ({
           paddingLeft: sizeHelper.calWp(30),
           height: sizeHelper.calHp(height || 80),
           alignItems: "center",
-          borderRadius: borderRadius || sizeHelper.calWp(25),
+          borderRadius: borderRadius || sizeHelper.calWp(22),
           backgroundColor: backgroundColor || theme.colors.grey,
         
           borderWidth:1,

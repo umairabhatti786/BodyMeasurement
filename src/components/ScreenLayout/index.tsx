@@ -37,7 +37,7 @@ const ScreenLayout: React.FC<ScreenLayoutProps> = ({
 
       <SafeAreaView style={[styles.background, {
         backgroundColor,
-        paddingTop: sizeHelper.calHp( paddingTop ||30),
+        paddingTop: sizeHelper.calHp( paddingTop ||Platform.OS=="ios"?10: 30),
 
 
       }]}>

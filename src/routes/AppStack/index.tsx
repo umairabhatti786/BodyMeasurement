@@ -10,6 +10,12 @@ import OnbordingScreen from "../../screens/Auth/Onboarding";
 import LoginScreen from "../../screens/Auth/Login";
 import SignupScreen from "../../screens/Auth/Signup";
 import HomeScreen from "../../screens/Main/Home";
+import CreateUserScreen from "../../screens/Main/CreateUser";
+import ViewMeasurementScreen from "../../screens/Main/ViewMeasurement";
+import StartNewMeasurementScreen from "../../screens/Main/StartNewMeasurement";
+import SubmitMeasurementsScreen from "../../screens/Main/SubmitMeasurements";
+import ExecuateMeasurementScreen from "../../screens/Main/ExecuateMeasurement";
+import MeasurementResultScreen from "../../screens/Main/MeasurementResult";
 
 const Stack = createNativeStackNavigator<any>();
 const AppStack = () => {
@@ -25,6 +31,13 @@ const AppStack = () => {
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={SignupScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="CreateUserScreen" component={CreateUserScreen} />
+        <Stack.Screen name="ViewMeasurementScreen" component={ViewMeasurementScreen} />
+        <Stack.Screen name="StartNewMeasurementScreen" component={StartNewMeasurementScreen} />
+        <Stack.Screen name="SubmitMeasurementsScreen" component={SubmitMeasurementsScreen} />
+        <Stack.Screen name="ExecuateMeasurementScreen" component={ExecuateMeasurementScreen} />
+        <Stack.Screen name="MeasurementResultScreen" component={MeasurementResultScreen} />
+
 
       </Stack.Navigator>
     </>
