@@ -44,7 +44,9 @@ const HomeScreen = ({ navigation }: any) => {
               }}
             />
           </TouchableOpacity>
-
+          <TouchableOpacity
+          onPress={()=>navigation.navigate("ProfileScreen")}
+          >
           <Image
             source={images.user_placeholder}
             style={{
@@ -54,6 +56,7 @@ const HomeScreen = ({ navigation }: any) => {
               borderRadius: sizeHelper.calWp(80),
             }}
           />
+          </TouchableOpacity>
         </View>
       </View>
     );

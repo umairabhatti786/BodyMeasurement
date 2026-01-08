@@ -1,5 +1,6 @@
 export const images = {
     logo: require("../images/logo.jpg"),
+    flag: require("../images/flag.png"),
     body_scan: require("../images/body_scan.png"),
     shield: require("../images/shield.png"),
     camera: require("../images/camera.png"),
@@ -9,7 +10,6 @@ export const images = {
     connect: require("../images/connect.png"),
     wallpaper: require("../images/wallpaper.png"),
     user_placeholder: require("../images/user_placeholder.jpg"),
-
     mearurement_background: require("../images/mearurement_background.png"),
 
 

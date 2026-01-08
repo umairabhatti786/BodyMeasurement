@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
@@ -292,7 +293,7 @@ const StartNewMeasurementScreen = ({ navigation }: any) => {
           </View>
 
            <CustomButtom 
-           onPress={()=>navigation.navigate("SubmitMeasurementsScreen")}
+           onPress={()=>navigation.navigate("ScanMeasurmentScreen")}
            text="Confirmar e próximo" width={'100%'}/>
            
     

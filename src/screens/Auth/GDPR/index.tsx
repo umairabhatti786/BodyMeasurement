@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     paddingBottom: sizeHelper.calHp(70),
     position: 'absolute',
     bottom: 0,
-
+    alignSelf:'center',
     // height:sizeHelper.calHp(220),
     justifyContent: 'center',
   },

@@ -16,6 +16,8 @@ import StartNewMeasurementScreen from "../../screens/Main/StartNewMeasurement";
 import SubmitMeasurementsScreen from "../../screens/Main/SubmitMeasurements";
 import ExecuateMeasurementScreen from "../../screens/Main/ExecuateMeasurement";
 import MeasurementResultScreen from "../../screens/Main/MeasurementResult";
+import ProfileScreen from "../../screens/Main/ProfileScreen";
+import ScanMeasurmentScreen from "../../screens/Main/ScanMeasurment";
 
 const Stack = createNativeStackNavigator<any>();
 const AppStack = () => {
@@ -31,6 +33,8 @@ const AppStack = () => {
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignupScreen" component={SignupScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="ScanMeasurmentScreen" component={ScanMeasurmentScreen} />
         <Stack.Screen name="CreateUserScreen" component={CreateUserScreen} />
         <Stack.Screen name="ViewMeasurementScreen" component={ViewMeasurementScreen} />
         <Stack.Screen name="StartNewMeasurementScreen" component={StartNewMeasurementScreen} />
