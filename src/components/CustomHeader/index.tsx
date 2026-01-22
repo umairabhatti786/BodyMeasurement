@@ -11,19 +11,20 @@ import {
 import ScreenLayout from '../ScreenLayout';
 import { images } from '../../assets/images';
 import sizeHelper from '../../utils/Helpers';
+import Logo from '../../assets/svg/logo.svg';
 
 const CustomHeader = ({ navigation }: any) => {
   return (
     <>
       <View style={styles.headerStyle}>
-        <Image
-          source={images.logo}
+        <Logo/>
+          {/* source={images.logo}
           style={{
             width: sizeHelper.calWp(140),
             height: sizeHelper.calWp(100),
             resizeMode:"contain"
           }}
-        />
+        /> */}
         <View style={{ width: '60%' }} />
         <Image
           source={images.ignore}

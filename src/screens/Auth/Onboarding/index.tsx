@@ -11,23 +11,36 @@ import CustomText from '../../../components/Text';
 import CustomHeader from '../../../components/CustomHeader';
 import ScreenLayoutOnboard from '../../../components/ScreenLayoutOnboard';
 import { useFocusEffect } from '@react-navigation/native';
+import OnBoard1 from '../../../assets/svg/onBoard1.svg';
+import OnBoard2 from '../../../assets/svg/onBoard2.svg';
+import OnBoard3 from '../../../assets/svg/onBoard3.svg';
 
 const Slides = [
   {
     key: 'One',
-    image: images.body,
+    image: <OnBoard1
+  style={{marginTop: sizeHelper.calHp(80),}}
+    />,
     title: 'Adote a postura correta',
     des: 'Para uma leitura mais precisa, mantenha o corpo relaxado e centrado.',
   },
   {
     key: 'Two',
-    image: images.wallpaper,
+    image: <Image
+    source={images.wallpaper}
+                style={{ width: '95%', marginTop: sizeHelper.calHp(60),resizeMode:"contain" }}
+
+    />,
+    
     title: 'Escolha um espaço limpo e bem iluminado.',
     des: 'Um fundo limpo ajuda o sistema a detetar o seu corpo com precisão.',
   },
   {
     key: 'Three',
-    image: images.connect,
+    image: <OnBoard3
+      style={{marginTop: sizeHelper.calHp(60),}}
+
+    />,
     title: 'Siga os passos de digitalização',
     des: 'Iremos orientá-lo(a) numa rápida inspeção frontal e lateral.',
   },
@@ -61,12 +74,13 @@ const OnbordingScreen = ({ navigation }: any) => {
       }}
       >
         <View style={{ alignItems: 'center', justifyContent: 'center',  }}>
-        
+          {item?.image}
+{/*         
           <Image
             source={item?.image}
             style={{ width: '95%', marginTop: sizeHelper.calHp(100),resizeMode:"contain" }}
             resizeMode="contain"
-          />
+          /> */}
           <View
             style={{
               alignItems: 'center',
